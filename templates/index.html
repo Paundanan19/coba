@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Event</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="chat-container">
+        <h2>Chatbot Event</h2>
+        <div class="chat-box" id="chat-box">
+            <div class="chat-message bot">
+                <p>Halo! Saya chatbot event. Tanyakan tentang event yang ingin Anda cari.</p>
+            </div>
+        </div>
+
+        <!-- Form Chatbot (Satu input dengan mikrofon) -->
+        <form id="chat-form">
+            <div class="input-container">
+                <input type="text" id="user-input" name="question" placeholder="Tanyakan tentang event..." required>
+                <button type="button" id="voice-btn">🎤</button> <!-- Tombol mikrofon -->
+                <button type="submit">Kirim</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
